@@ -38,15 +38,20 @@ const Header1: NextPage<Header1Type> = ({
     );
   }, [router]);
 
-  const onContactButtonClick = useCallback(() => {
-    router.push("/contact-us1");
-  }, [router]);
-
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
+
+  const onContactButtonClick = useCallback(() => {
+    const anchor = document.querySelector(
+      "[data-scroll-to='headingContainer']"
+    );
+    if (anchor) {
+      anchor.scrollIntoView({ block: "start", behavior: "smooth" });
+    }
+  }, []);
 
   return (
     <header
