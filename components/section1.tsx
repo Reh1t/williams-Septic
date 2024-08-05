@@ -18,17 +18,17 @@ const Section1: NextPage<Section1Type> = ({ className = "" }) => {
         </h1>
       </div>
       <div className="self-stretch flex flex-col items-center justify-start max-w-full text-xl text-gray-300 font-work-sans">
-        <div className="self-stretch flex flex-row flex-wrap items-center justify-center py-0 px-[38px] box-border gap-[108px] max-w-full gap-[54px] gap-[27px]">
+        <div className="self-stretch flex flex-row flex-wrap items-center justify-center py-0 px-[38px] box-border sm:gap-[108px] max-w-full">
           <div className="w-[525px] flex flex-row items-center justify-start max-w-full">
             <img
-              className="h-[436px] flex-1 relative max-w-full overflow-hidden object-cover"
+              className="h-auto flex-1 relative max-w-full overflow-hidden object-cover"
               loading="lazy"
               alt=""
               src="/photo@2x.png"
             />
           </div>
           <div className="flex-1 flex flex-row items-start justify-start min-w-[335px] max-w-full">
-            <div className="h-[161px] flex-1 relative tracking-[-0.02em] inline-block max-w-full mq450:text-base">
+            <div className="h-auto flex-1 relative tracking-[-0.02em] inline-block max-w-full mq450:text-base">
               Choose Williams Septic for expert, reliable septic services in
               Northern Ontario. Our family-owned business delivers top-quality
               installation, maintenance, and emergency repairs. With a focus on
