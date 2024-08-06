@@ -64,7 +64,7 @@ const Header1: NextPage<Header1Type> = ({
             className="h-[50.7px] w-[50.7px] relative object-cover"
             loading="lazy"
             alt=""
-            src="/logo.png"
+            src="/septiclogo.png"
           />
           <b className="relative leading-[32px] mq450:text-base mq450:leading-[26px]">
             Williams Septic
