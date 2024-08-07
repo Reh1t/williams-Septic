@@ -9,7 +9,10 @@ const Section1: NextPage<Section1Type> = ({ className = "" }) => {
     <section
       className={`self-stretch bg-white overflow-hidden flex flex-col items-end justify-start py-5 px-10 box-border max-w-full text-left text-base text-white font-body-body-2 ${className}`}
     >
-      <div className="w-[500px] bg-dark-blue flex flex-col items-start justify-start py-4 pl-16 pr-5 box-border gap-2 max-w-full mq450:pl-5 mq450:box-border">
+      <div
+        className="w-[500px] bg-dark-blue flex flex-col items-start justify-start py-4 pl-16 pr-5 box-border gap-2 max-w-full mq450:pl-5 mq450:box-border"
+        data-scroll-to="aboutContainer"
+      >
         <a className="[text-decoration:none] relative tracking-[0.3em] leading-[24px] text-[inherit] inline-block min-w-[75px]">
           ABOUT
         </a>

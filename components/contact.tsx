@@ -15,7 +15,7 @@ const Contact: NextPage<ContactType> = ({ className = "" }) => {
       <div className="self-stretch overflow-hidden flex flex-row flex-wrap items-start justify-center py-[83px] px-5 box-border max-w-full">
         <div
           className="w-[1140px] flex flex-row flex-wrap items-center justify-start py-0 pl-0 pr-[390px] box-border gap-x-10 gap-y-9 max-w-full lg:pr-[195px] lg:box-border gap-[18px] mq750:pr-[97px] mq750:box-border mq450:pr-5 mq450:box-border"
-          data-scroll-to="headingContainer"
+          data-scroll-to="contactUsContainer"
         >
           <div className="h-px flex-1 relative border-lavender border-t-[1px] border-solid box-border max-w-full" />
           <h1 className="m-0 relative text-inherit leading-[120%] font-bold font-[inherit] whitespace-nowrap">

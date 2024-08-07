@@ -11,7 +11,7 @@ const GalleryContainer: NextPage<GalleryContainerType> = ({
     <section
       className={`self-stretch flex flex-col items-start justify-start pt-0 px-0 box-border max-w-full lg:box-border mq750:box-border mq1050:h-auto ${className}`}
     >
-      <div className="flex flex-row flex-wrap gap-0 w-full">
+      <div className="flex flex-row flex-wrap gap-0 w-full" data-scroll-to="galleryContainer">
         <div className="flex flex-col w-1/3">
           <img
             className="w-full h-full object-cover"

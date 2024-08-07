@@ -24,19 +24,32 @@ const Header1: NextPage<Header1Type> = ({
 
   const router = useRouter();
 
-  const onTAGHdLinkNormalContainerClick = useCallback(() => {
-    router.push("https://williams-plumbing-solutions.vercel.app/about-us");
-  }, [router]);
+  const onAbooutClick = useCallback(() => {
+    const anchor = document.querySelector(
+      "[data-scroll-to='aboutContainer']"
+    );
+    if (anchor) {
+      anchor.scrollIntoView({ block: "start", behavior: "smooth" });
+    }
+  }, []);
 
   const onServicesTextClick = useCallback(() => {
-    router.push("https://williams-plumbing-solutions.vercel.app/services");
-  }, [router]);
+    const anchor = document.querySelector(
+      "[data-scroll-to='serviceContainer']"
+    );
+    if (anchor) {
+      anchor.scrollIntoView({ block: "start", behavior: "smooth" });
+    }
+  }, []);
 
   const onProjectsTextClick = useCallback(() => {
-    router.push(
-      "https://williams-plumbing-solutions.vercel.app/project-gallery"
+    const anchor = document.querySelector(
+      "[data-scroll-to='galleryContainer']"
     );
-  }, [router]);
+    if (anchor) {
+      anchor.scrollIntoView({ block: "start", behavior: "smooth" });
+    }
+  }, []);
 
   const [isOpen, setIsOpen] = useState(false);
 
@@ -46,7 +59,7 @@ const Header1: NextPage<Header1Type> = ({
 
   const onContactButtonClick = useCallback(() => {
     const anchor = document.querySelector(
-      "[data-scroll-to='headingContainer']"
+      "[data-scroll-to='contactUsContainer']"
     );
     if (anchor) {
       anchor.scrollIntoView({ block: "start", behavior: "smooth" });
@@ -79,7 +92,7 @@ const Header1: NextPage<Header1Type> = ({
           <div className="flex lg:flex-col items-center justify-center">
             <div
               className="flex flex-row items-center justify-center py-[7px] px-4 font-bold text-black cursor-pointer"
-              onClick={onTAGHdLinkNormalContainerClick}
+              onClick={onAbooutClick}
             >
               <a className="relative leading-[26px] text-[inherit] inline-block">
                 About
