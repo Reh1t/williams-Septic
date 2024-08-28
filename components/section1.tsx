@@ -11,7 +11,7 @@ const Section1: NextPage<Section1Type> = ({ className = "" }) => {
     >
       <div
         className="w-[500px] bg-dark-blue flex flex-col items-start justify-start py-4 pl-16 pr-5 box-border gap-2 max-w-full mq450:pl-5 mq450:box-border"
-        data-scroll-to="aboutContainer"
+        data-scroll-to="about"
       >
         <a className="[text-decoration:none] relative tracking-[0.3em] leading-[24px] text-[inherit] inline-block min-w-[75px]">
           ABOUT

@@ -2,12 +2,91 @@ import type { NextPage } from "next";
 import IconBox from "./icon-box";
 import FormField from "./form-field";
 import { handleFormSubmit } from "./handleContactForm";
+import { useEffect } from "react";
 
 export type ContactType = {
   className?: string;
 };
 
 const Contact: NextPage<ContactType> = ({ className = "" }) => {
+  useEffect(() => {
+    // Load the script
+    const script = document.createElement("script");
+    script.src =
+      "https://d3ey4dbjkt2f6s.cloudfront.net/assets/static_link/work_request_embed_snippet.js";
+    script.setAttribute("clienthub_id", "c6ab68fa-74c2-4d46-9066-ff2210b88264");
+    script.setAttribute(
+      "form_url",
+      "https://clienthub.getjobber.com/client_hubs/c6ab68fa-74c2-4d46-9066-ff2210b88264/public/work_request/embedded_work_request_form"
+    );
+    document.body.appendChild(script);
+
+    script.onload = () => {
+      // Apply Tailwind CSS classes to the embedded form elements once the script is loaded
+      const form = document.getElementById(
+        "c6ab68fa-74c2-4d46-9066-ff2210b88264"
+      );
+
+      if (form) {
+        form.classList.add(
+          "bg-white",
+          "p-6",
+          "rounded-lg",
+          "shadow-md",
+          "max-w-lg",
+          "mx-auto",
+          "my-8"
+        );
+
+        const inputs = form.querySelectorAll("input, textarea, select");
+        inputs.forEach((input) => {
+          input.classList.add(
+            "w-full",
+            "px-4",
+            "py-2",
+            "mb-4",
+            "border",
+            "border-gray-300",
+            "rounded",
+            "focus:outline-none",
+            "focus:ring-2",
+            "focus:ring-blue-500"
+          );
+        });
+
+        const labels = form.querySelectorAll("label");
+        labels.forEach((label) => {
+          label.classList.add(
+            "block",
+            "text-sm",
+            "font-medium",
+            "text-gray-700",
+            "mb-2"
+          );
+        });
+
+        const buttons = form.querySelectorAll("button");
+        buttons.forEach((button) => {
+          button.classList.add(
+            "bg-blue-500",
+            "text-white",
+            "px-4",
+            "py-2",
+            "rounded",
+            "hover:bg-blue-600",
+            "focus:outline-none",
+            "focus:ring-2",
+            "focus:ring-blue-500"
+          );
+        });
+      }
+    };
+
+    return () => {
+      document.body.removeChild(script);
+    };
+  }, []);
+
   return (
     <section
       className={`self-stretch bg-main-background flex flex-col items-start justify-start max-w-full text-left text-37xl text-variant-background font-body-3 ${className}`}
@@ -23,7 +102,7 @@ const Contact: NextPage<ContactType> = ({ className = "" }) => {
           </h1>
         </div>
       </div>
-      <div className="self-stretch bg-white overflow-hidden flex flex-row flex-wrap items-center justify-center py-[120px] px-[150px] box-border gap-5 max-w-full text-mid text-secondary lg:pl-[75px] lg:pr-[75px] lg:box-border mq750:pl-[37px] mq750:pr-[37px] mq750:box-border mq450:pt-[51px] mq450:pb-[51px] mq450:box-border mq1050:pt-[78px] mq1050:pb-[78px] mq1050:box-border">
+      <div className="self-stretch bg-white overflow-hidden flex flex-row flex-wrap items-start justify-center py-[120px] px-[150px] box-border gap-5 max-w-full text-mid text-secondary lg:pl-[75px] lg:pr-[75px] lg:box-border mq750:pl-[37px] mq750:pr-[37px] mq750:box-border mq450:pt-[51px] mq450:pb-[51px] mq450:box-border mq1050:pt-[78px] mq1050:pb-[78px] mq1050:box-border">
         <div className="w-[480px] flex flex-col items-start justify-start gap-8 max-w-full">
           <div className="self-stretch flex flex-col items-start justify-start gap-3.5">
             <div className="relative tracking-[0.15em] leading-[120%] uppercase font-medium whitespace-nowrap">
@@ -54,67 +133,7 @@ const Contact: NextPage<ContactType> = ({ className = "" }) => {
             </div>
           </div>
         </div>
-        <div className="w-[520px] mx-auto rounded-3xs bg-main-background overflow-hidden shrink-0 flex flex-col items-start justify-center py-[54px] px-16 box-border gap-9 max-w-full text-xl text-primary mq750:py-[35px] mq750:px-8 mq750:box-border">
-          <div className="flex-1 flex flex-col items-center justify-center gap-[24px] min-w-[346px] max-w-full mq750:min-w-full">
-            <form onSubmit={handleFormSubmit} className="w-full">
-              <div className="self-stretch flex flex-col items-start justify-start gap-[24px] max-w-full text-base">
-                <div className="self-stretch flex flex-row items-center justify-start gap-[32px] mq750:flex-wrap mq750:gap-[16px]">
-                  <div className="flex-1 flex flex-col items-start justify-start gap-[8px] min-w-[162px]">
-                    <div className="self-stretch relative leading-[150%] font-medium">
-                      Your name
-                    </div>
-                    <div className="self-stretch shadow-[0px_1px_2px_rgba(0,_0,_0,_0.05)] rounded-lg bg-white flex flex-row items-start justify-start py-2.5 px-[15px] border-[1px] border-solid border-gainsboro-200">
-                      <input
-                        className="w-full [border:none] [outline:none] font-medium font-small-text text-base bg-[transparent] h-6 flex-1 relative leading-[150%] text-gray-200 text-left inline-block min-w-[131px] p-0"
-                        placeholder="Jane"
-                        id="first_name"
-                        type="text"
-                        defaultValue={""}
-                        required
-                      />
-                    </div>
-                  </div>
-                </div>
-                <div className="self-stretch flex flex-col items-start justify-start gap-[8px] max-w-full">
-                  <div className="self-stretch relative leading-[150%] font-medium">
-                    Email address
-                  </div>
-                  <div className="self-stretch shadow-[0px_1px_2px_rgba(0,_0,_0,_0.05)] rounded-lg bg-white box-border flex flex-row items-start justify-start py-2.5 px-[15px] max-w-full border-[1px] border-solid border-gainsboro-200">
-                    <input
-                      className="w-full [border:none] [outline:none] font-medium font-small-text text-base bg-[transparent] h-6 flex-1 relative leading-[150%] text-gray-200 text-left inline-block min-w-[250px] whitespace-nowrap max-w-full p-0"
-                      placeholder="email@janesfakedomain.net"
-                      id="email"
-                      defaultValue={""}
-                      type="email"
-                      required
-                    />
-                  </div>
-                </div>
-                <div className="self-stretch flex flex-col items-start justify-start gap-[8px]">
-                  <div className="self-stretch relative leading-[150%] font-medium">
-                    Your message
-                  </div>
-                  <textarea
-                    className="bg-white h-[162px] w-auto [outline:none] self-stretch shadow-[0px_1px_2px_rgba(0,_0,_0,_0.05)] rounded-lg box-border flex flex-row items-start justify-start py-3 px-4 font-medium text-base text-gray-200 border-[1px] border-solid border-gainsboro-200"
-                    placeholder="Enter your question or message"
-                    id="project_details"
-                    defaultValue={""}
-                    required
-                    rows={8}
-                    cols={27}
-                  />
-                </div>
-                <div className="self-stretch flex flex-col items-start">
-                  <button className="cursor-pointer [border:none] py-2 px-6 bg-black shadow-[0px_1px_2px_rgba(0,_0,_0,_0.05)] rounded-lg flex flex-row items-center hover:bg-darkslategray-200">
-                    <div className="relative text-xl leading-[150%] font-medium font-small-text text-white text-left inline-block min-w-[68px] mq450:text-base mq450:leading-[24px]">
-                      Submit
-                    </div>
-                  </button>
-                </div>
-              </div>
-            </form>
-          </div>
-        </div>
+        <div id="c6ab68fa-74c2-4d46-9066-ff2210b88264"></div>
       </div>
     </section>
   );

@@ -4,8 +4,8 @@ import Section1 from "../components/section1";
 import Williams from "../components/williams";
 import GalleryContainer from "../components/gallery-container";
 import Contact from "../components/contact";
-import Footer from "../components/footer";
-import Header1 from "../components/header";
+import Footer1 from "../components/footer1";
+import Header1 from "../components/header1";
 
 const WillaimsSeptic: NextPage = () => {
   return (
@@ -30,13 +30,15 @@ const WillaimsSeptic: NextPage = () => {
       <Section1 />
       <Williams />
       <section className="self-stretch flex flex-row items-start justify-center pt-0 px-5 pb-2.5 text-left text-45xl text-black font-body-3">
-        <h1 className="m-0 h-[83px] relative text-inherit font-bold font-[inherit] inline-block mq450:text-19xl mq1050:text-32xl">
+        <h1 className="m-0 h-[83px] relative text-inherit font-bold font-[inherit] inline-block mq450:text-19xl mq1050:text-32xl"
+        data-scroll-to='gallery'
+        >
           Project Gallery
         </h1>
       </section>
       <GalleryContainer />
       <Contact />
-      <Footer />
+      <Footer1 />
     </div>
   );
 };

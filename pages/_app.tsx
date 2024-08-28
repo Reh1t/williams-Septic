@@ -8,7 +8,7 @@ function MyApp({ Component, pageProps }: AppProps) {
     <Fragment>
       <Head>
         <title>Williams Septic</title>
-        <link rel="icon" type="image/png" href="./septicLogo.png" />
+        <link rel="icon" type="image/png" href="./favicon.ico" />
         <meta
           name="viewport"
           content="minimum-scale=1, initial-scale=1, width=device-width"
