@@ -17,7 +17,7 @@ const Section: NextPage<Section1Type> = ({ className = "" }) => {
           src="/williams20logo3transparent20bgroundpng@2x.png"
         />
         <b className="h-0 relative leading-[32px] text-black inline-block mq450:text-base mq450:leading-[26px]">
-          by Williams Plumbing Solutions
+          by Williams Solutions.Pro
         </b>
       </div>
       <div className="self-stretch flex flex-col items-center justify-start max-w-full text-xl text-gray-300 font-work-sans">

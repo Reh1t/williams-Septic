@@ -228,7 +228,7 @@ const Footer1: NextPage<Footer1Type> = ({
                 Email Us:
               </div>
               <div className="relative leading-[25.6px] font-semibold whitespace-nowrap">
-                info@williamsplumbingsolutions.ca
+                info@williamssolutions.pro
               </div>
             </div>
           </div>
