@@ -236,7 +236,7 @@ const Header1: NextPage<Header1Type> = ({
               alt=""
               src="/tag-hd-logo@2x.png"
             />
-            <h1 className="m-0 flex-1 relative text-[100px] tracking-[-0.1em] leading-[53px] font-normal font-ledger inline-block min-w-[213px] max-w-full lg:text-53xl mq1050:text-32xl mq825:text-19xl mq825:leading-[42px] mq450:text-10xl mq450:leading-[32px]">
+            <h1 className="m-0 flex-1 relative text-[100px] tracking-[-0.1em] leading-[53px] font-normal font-inherit inline-block min-w-[213px] max-w-full lg:text-53xl mq1050:text-32xl mq825:text-19xl mq825:leading-[42px] mq450:text-10xl mq450:leading-[32px]">
               WILLIAMS
             </h1>
           </div>
