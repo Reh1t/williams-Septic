@@ -17,7 +17,7 @@ const WhySection: NextPage<SectionType> = ({ className = "" }) => {
               >
               <p className="m-0">{`Why are septic systems important?`}</p>
             </h1>
-            <div className="self-stretch flex flex-col items-start justify-start text-justify text-base-8 text-gray font-body-body-2-30-space">
+            <div className="self-stretch flex flex-col items-start justify-start text-justify text-xl text-gray font-body-body-2-30-space">
               <div className="self-stretch relative leading-[26px]">{`There are many contaminants in wastewater that, if they enter drinking water, groundwater or surface water supplies, can negatively affect your health and the environment. These contaminants include nitrate, phosphorus and disease-causing bacteria, viruses and parasites.`}</div>
             </div>
           </div>

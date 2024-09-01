@@ -15,7 +15,7 @@ const TypesSection: NextPage<SectionType> = ({ className = "" }) => {
             >
               Types of systems
             </b>
-            <div className="w-[856px] flex flex-col items-start justify-start max-w-full text-base-8 text-gray font-inter">
+            <div className="w-[856px] flex flex-col items-start justify-start max-w-full text-xl text-gray font-inter">
               <div className="self-stretch relative leading-[26px]">
                 There are five classes of systems identified by the Ontario
                 Building Code to deal with waste, but most aren’t applicable for
