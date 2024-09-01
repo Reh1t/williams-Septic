@@ -22,7 +22,7 @@ const Footer1: NextPage<Footer1Type> = ({
   const router = useRouter();
 
   const onHomeClick = useCallback(() => {
-    router.push("/");
+    router.push("https://williams-plumbing-solutions.vercel.app/");
   }, [router]);
 
   const onSocialIconsContainerClick = useCallback(() => {
@@ -55,12 +55,8 @@ const Footer1: NextPage<Footer1Type> = ({
     }
   }, []);
 
-  const onProjectsTextClick = useCallback(() => {
-    router.push("/project-gallery");
-  }, [router]);
-
   const onWaterTextClick = useCallback(() => {
-    router.push("/water-treatment");
+    router.push("https://williams-plumbing-solutions.vercel.app/water-treatment");
   }, [router]);
 
   const onAboutUsTextClick = useCallback(() => {
@@ -72,6 +68,10 @@ const Footer1: NextPage<Footer1Type> = ({
 
   const onContactUsTextClick = useCallback(() => {
     router.push("https://getjobber.com/");
+  }, [router]);
+
+  const onBlogTextClick = useCallback(() => {
+    router.push("https://blog-delta-three-74.vercel.app/");
   }, [router]);
 
   const onSepticButtonClick = useCallback(() => {
@@ -185,7 +185,7 @@ const Footer1: NextPage<Footer1Type> = ({
             className="self-stretch relative leading-[150%] font-medium cursor-pointer"
             onClick={onServiesTextClick}
           >
-            Service
+            Why Septic?
           </div>
           <div
             className="self-stretch relative leading-[150%] font-medium cursor-pointer"
@@ -198,6 +198,12 @@ const Footer1: NextPage<Footer1Type> = ({
             onClick={onContactUsTextClick}
           >
             Contact Us
+          </div>
+          <div
+            className="self-stretch relative leading-[150%] font-medium cursor-pointer"
+            onClick={onBlogTextClick}
+          >
+            Blog
           </div>
         </div>
       </div>

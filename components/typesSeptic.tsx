@@ -12,7 +12,6 @@ const TypesSection: NextPage<SectionType> = ({ className = "" }) => {
           <div className="self-stretch flex flex-col items-center justify-start gap-[37px] max-w-full mq750:gap-[18px]">
             <b
               className="self-stretch relative leading-[60px] mq450:text-19xl mq450:leading-[36px] mq1050:text-32xl mq1050:leading-[48px]"
-              data-scroll-to="service"
             >
               Types of systems
             </b>
