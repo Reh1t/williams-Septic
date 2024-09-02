@@ -24,6 +24,7 @@ const WhySection: NextPage<SectionType> = ({ className = "" }) => {
           <img
             className=" w-[525px] object-cover max-w-full"
             loading="lazy"
+
             alt=""
             src="/whySection.png"
           />
