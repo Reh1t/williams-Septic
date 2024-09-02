@@ -57,7 +57,7 @@ const Contact: NextPage<ContactType> = ({ className = "" }) => {
               <IconBox
                 phone="/phone1.svg"
                 phoneNumber="Email Address"
-                infoContent="info@williamsseptic.ca"
+                infoContent="info@williamssolutions.pro"
               />
             </div>
           </div>
