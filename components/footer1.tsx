@@ -185,7 +185,7 @@ const Footer1: NextPage<Footer1Type> = ({
             className="self-stretch relative leading-[150%] font-medium cursor-pointer"
             onClick={onServiesTextClick}
           >
-            Why Septic?
+            Importance
           </div>
           <div
             className="self-stretch relative leading-[150%] font-medium cursor-pointer"

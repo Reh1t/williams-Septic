@@ -135,7 +135,7 @@ const Header1: NextPage<Header1Type> = ({
               className="relative leading-[26px] text-[inherit] inline-block min-w-[65px] cursor-pointer"
               onClick={onServicesTextClick}
             >
-              Services
+              Importance
             </a>
           </div>
           <div className="flex flex-row items-center justify-center py-[7px] px-[15px] box-border font-bold text-black">

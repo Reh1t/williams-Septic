@@ -13,21 +13,7 @@ const WillaimsSeptic: NextPage = () => {
   return (
     <div className="w-full relative bg-white overflow-hidden flex flex-col items-start justify-start leading-[normal] tracking-[normal]">
       <Header1 />
-      <div className="self-stretch flex flex-col items-center justify-center pt-0 px-5 box-border max-w-full">
-        <div className="self-stretch w-full flex flex-col items-center justify-start bg-no-repeat bg-cover bg-[top]">
-          <div className="w-full relative">
-            <img
-              className="h-auto max-w-full max-h-full object-cover"
-              alt=""
-              src="/image-1@2x.png"
-              style={{
-                width: "100%",
-                // height: "100%",
-              }}
-            />
-          </div>
-        </div>
-      </div>
+      
       <Section />
       <Section1 />
       <WhySection />
