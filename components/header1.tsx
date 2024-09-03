@@ -79,6 +79,10 @@ const Header1: NextPage<Header1Type> = ({
   const onExcavationButtonClick = useCallback(() => {
     router.push("https://williamsexcavation.vercel.app/");
   }, [router]);
+  
+    const onLoggingButtonClick = useCallback(() => {
+      router.push("https://williamslogging.vercel.app/");
+    }, [router]);
 
   const [isOpen, setIsOpen] = useState(false);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
@@ -91,10 +95,6 @@ const Header1: NextPage<Header1Type> = ({
       openMenu();
     }
   };
-
-  const onLoggingButtonClick = useCallback(() => {
-    router.push("https://williamslogging.vercel.app/");
-  }, [router]);
 
   // Update the `openMenu` and `closeMenu` functions to handle both the hamburger and dropdown menus
   const openMenu = () => {
