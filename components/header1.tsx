@@ -80,6 +80,10 @@ const Header1: NextPage<Header1Type> = ({
     router.push("https://williamsexcavation.vercel.app/");
   }, [router]);
 
+  const [isOpen, setIsOpen] = useState(false);
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  let closeTimeout: NodeJS.Timeout;
+
   const handleMenuClick = () => {
     if (isOpen) {
       closeMenu();
@@ -92,9 +96,7 @@ const Header1: NextPage<Header1Type> = ({
     router.push("https://williamslogging.vercel.app/");
   }, [router]);
 
-  const [isOpen, setIsOpen] = useState(false);
-  let closeTimeout: NodeJS.Timeout;
-
+  // Update the `openMenu` and `closeMenu` functions to handle both the hamburger and dropdown menus
   const openMenu = () => {
     clearTimeout(closeTimeout);
     setIsOpen(true);
@@ -103,7 +105,22 @@ const Header1: NextPage<Header1Type> = ({
   const closeMenu = () => {
     closeTimeout = setTimeout(() => {
       setIsOpen(false);
-    }, 200); // Adjust the delay as needed
+    }, 200);
+  };
+  // Add new functions to handle the dropdown menu on small screens
+  const handleDropdownClick = () => {
+    setIsDropdownOpen(!isDropdownOpen);
+  };
+
+  const openDropdown = () => {
+    clearTimeout(closeTimeout);
+    setIsDropdownOpen(true);
+  };
+
+  const closeDropdown = () => {
+    closeTimeout = setTimeout(() => {
+      setIsDropdownOpen(false);
+    }, 200);
   };
 
   return (
@@ -157,27 +174,30 @@ const Header1: NextPage<Header1Type> = ({
               Projects
             </a>
           </div>
-          <div className="relative">
+          <div
+            className="relative"
+            onMouseEnter={!isOpen ? openDropdown : undefined}
+            onMouseLeave={!isOpen ? closeDropdown : undefined}
+          >
             <div
               className="flex flex-row items-center justify-center py-[7px] px-4 font-bold text-black cursor-pointer"
-              onMouseEnter={openMenu}
-              onMouseLeave={closeMenu}
+              onClick={isOpen ? handleDropdownClick : undefined} // Toggle dropdown on click for small screens
             >
               <a className="relative leading-[26px] text-[inherit] inline-block min-w-[39px]">
                 Williams Services
                 <img
                   className="relative w-3 h-3 ml-3"
                   src="/down-arrow.png"
-                  alt="dwon arrrow"
+                  alt="down arrow"
                 />
               </a>
             </div>
             <div
               className={`absolute top-full left-0 bg-white shadow-[0px_8px_16px_rgba(55,_99,_244,_0.15)] rounded-lg z-10 ${
-                isOpen ? "block" : "hidden"
+                isDropdownOpen ? "block" : "hidden"
               }`}
-              onMouseEnter={openMenu}
-              onMouseLeave={closeMenu}
+              onMouseEnter={!isOpen ? openDropdown : undefined}
+              onMouseLeave={!isOpen ? closeDropdown : undefined}
             >
               <div className="flex flex-col items-start justify-start py-2 px-4 gap-[8px]">
                 <a
