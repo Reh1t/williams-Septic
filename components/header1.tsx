@@ -79,10 +79,10 @@ const Header1: NextPage<Header1Type> = ({
   const onExcavationButtonClick = useCallback(() => {
     router.push("https://williamsexcavation.vercel.app/");
   }, [router]);
-  
-    const onLoggingButtonClick = useCallback(() => {
-      router.push("https://williamslogging.vercel.app/");
-    }, [router]);
+
+  const onLoggingButtonClick = useCallback(() => {
+    router.push("https://williamslogging.vercel.app/");
+  }, [router]);
 
   const [isOpen, setIsOpen] = useState(false);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
