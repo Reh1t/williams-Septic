@@ -27,7 +27,7 @@ const Section1: NextPage<Section1Type> = ({ className = "" }) => {
               className="h-[436px] flex-1 relative max-w-full overflow-hidden object-cover"
               loading="lazy"
               alt=""
-              src="/photo@2x.png"
+              src="/speticc.jpg"
             />
           </div>
           <div className="flex-1 flex flex-row items-start justify-start min-w-[335px] max-w-full">
